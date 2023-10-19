@@ -1,0 +1,18 @@
+<div class="container mt-5">
+  <div class="row justify-content-center align-items-center">
+    <div class="col-md-6">
+      <div class="card align-items-center" >
+        <img src="{{ user.avatar_url }}" style="height: 300px; width: 300px;" class="card-img-top mt-3" alt="Mi Foto">
+        <div class="card-body">
+          <h5 class="card-title">Bievenidos a mi pagina!</h5>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">Nombre de usuario: {{ user.login }}</li>
+            <li class="list-group-item">Ubicación: {{ user.location }}</li>
+            <li class="list-group-item">Repositorios públicos: {{ user.public_repos }}</li>
+            <li class="list-group-item">Descripcion: {{ user.bio }}</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

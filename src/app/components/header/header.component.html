@@ -1,0 +1,18 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-dark">
+  <a class="navbar-brand text-light ms-5" *ngIf="logged == true">🟢{{emailUsuario}}</a>
+
+  <ul class="navbar-nav" style="margin-left: auto; margin-right: 40px;"> <!-- Utiliza estilo "margin-left: auto;" para alinear a la derecha -->
+    <li class="nav-item">
+      <a class="nav-link text-light" routerLink="">🏠 Inicio</a>
+    </li>
+    <li class="nav-item" *ngIf="logged == false">
+      <a class="nav-link text-light" routerLink="/login">🔑 Login</a>
+    </li>
+    <li class="nav-item" *ngIf="logged == true">
+      <a class="nav-link text-light" routerLink="/altaRepartidor">🍧 Alta Repartidor</a>
+    </li>
+    <li class="nav-item" *ngIf="logged == true">
+      <a class="nav-link text-light" routerLink="" (click)="logout()">⭕ Salir</a>
+    </li>
+  </ul>
+</nav>

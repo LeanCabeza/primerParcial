@@ -1,0 +1,23 @@
+<div>
+  <h4 class="d-flex justify-content-between align-items-center mb-3">
+    <span class="text-primary">Listado de países</span>
+  </h4>
+  <div>
+    <label for="continent">Seleccione un continente</label>
+    <hr>
+    <select class="form-select" id="continent" [(ngModel)]="selectedContinent" (ngModelChange)="cargarPaisesPorContinente(this.selectedContinent.toLowerCase())">
+      <option value="Europe">Europeo</option>
+      <option value="Africa">Áfricano</option>
+    </select>
+  </div>
+  <ul class="list-group mb-3">
+    <li *ngFor="let country of displayedCountries" class="list-group-item d-flex justify-content-between lh-sm">
+      <div>
+        <img [src]="country.flags.png" alt="{{ country.name.common }}" width="30">
+        <h6 class="my-0">{{ country.name.common }}</h6>
+        <small class="text-muted">{{ country.region }}</small>
+      </div>
+      <button class="btn btn-primary" (click)="seleccionarPais(country)">Seleccionar</button>
+    </li>
+  </ul>
+</div>

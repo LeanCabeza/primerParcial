@@ -1,0 +1,64 @@
+<form [formGroup]="repartidorForm" class="needs-validation" novalidate (ngSubmit)="submitForm()">
+  <div class="row g-3">
+    <div class="col-sm-6">
+      <label for="dni" class="form-label">DNI</label>
+      <input type="text" class="form-control" id="dni" formControlName="dni">
+      <div *ngIf="repartidorForm.get('dni')?.hasError('required') && repartidorForm.get('dni')?.touched" class="text-danger">
+        DNI es requerido.
+      </div>
+      <div *ngIf="repartidorForm.get('dni')?.hasError('minlength')" class="text-danger">
+        DNI debe tener al menos 5 caracteres.
+      </div>
+    </div>
+
+    <div class="col-sm-6">
+      <label for="nombre" class="form-label">Nombre</label>
+      <input type="text" class="form-control" id="nombre" formControlName="nombre">
+      <div *ngIf="repartidorForm.get('nombre')?.hasError('required') && repartidorForm.get('nombre')?.touched" class="text-danger">
+        Nombre es requerido.
+      </div>
+      <div *ngIf="repartidorForm.get('nombre')?.hasError('minlength')" class="text-danger">
+        Nombre debe tener al menos 3 caracteres.
+      </div>
+    </div>
+
+    <div class="col-sm-6">
+      <label for="edad" class="form-label">Edad</label>
+      <input type="number" class="form-control" id="edad" formControlName="edad">
+      <div *ngIf="repartidorForm.get('edad')?.hasError('required') && repartidorForm.get('edad')?.touched" class="text-danger">
+        Edad es requerido.
+      </div>
+    </div>
+
+    <div class="col-sm-6">
+      <label for="capacidadTransporte" class="form-label">Capacidad de transporte</label>
+      <input type="number" 
+              class="form-control" 
+              id="capacidadTransporte" 
+              formControlName="capacidadTransporte">
+      <div *ngIf="repartidorForm.get('capacidadTransporte')?.hasError('required') && repartidorForm.get('capacidadTransporte')?.touched" class="text-danger">
+        Capidad de transporte es requerido.
+      </div>
+    </div>
+
+    <div class="col-sm-6">
+      <label for="paisOrigen" class="form-label">Pais Origen</label>
+      <br>
+      <label><strong style="font-size: 25px;color: green;">{{paisOrigen}} </strong></label>
+    </div>
+
+    <div class="col-sm-6">
+      <label for="unidadPropia" class="form-label">Unidad propia</label>
+      <select class="form-select" id="unidadPropia" formControlName="unidadPropia">
+        <option value="" disabled>Seleccionar...</option>
+        <option value=true>Si</option>
+        <option value=false>No</option>
+      </select>
+      <div *ngIf="repartidorForm.get('unidadPropia')?.hasError('required') && repartidorForm.get('unidadPropia')?.touched" class="text-danger">
+        Unidad Propia es requerido.
+      </div>
+    </div>
+  </div>
+  <hr class="my-4">
+  <button class="w-100 btn btn-primary btn-lg" type="submit" [disabled]="repartidorForm.invalid">Dar de Alta</button>
+</form>

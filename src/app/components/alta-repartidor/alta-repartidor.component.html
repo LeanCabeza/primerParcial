@@ -1,0 +1,21 @@
+<body class="bg-light">
+    
+<div class="container">
+  <main>
+    <div class="py-5 text-center">
+      <h2>Alta Repartidor</h2>
+    </div>
+
+    <div class="row g-5">
+      <div class="col-md-8">
+        <app-form [paisOrigen]="paisOrigen"></app-form>
+      </div>
+      <div class="col-md-4">
+        <app-flags (selectedContinentOutputFlags)="recibirPais($event)"></app-flags>
+      </div>
+    </div>
+
+  </main>
+
+</div>
+</body>
