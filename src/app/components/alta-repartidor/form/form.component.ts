@@ -33,8 +33,7 @@ export class FormComponent implements OnInit {
   submitForm() {
     console.log("Entro al submit form",this.repartidorForm.value);
 
-    if(
-this.paisOrigen != "" ){
+    if(this.paisOrigen != "" ){
         let repartidor : Repartidor  = {
           dni: this.repartidorForm.value.dni,
           nombre: this.repartidorForm.value.nombre,

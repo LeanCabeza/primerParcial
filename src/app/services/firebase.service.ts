@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
-import Swal from 'sweetalert2';
 
 
 @Injectable({
@@ -9,6 +8,7 @@ import Swal from 'sweetalert2';
 export class FirebaseService {
 
   public actualUserMail: string;
+  public logged: boolean = false;
 
   constructor(public auth: AngularFireAuth) { 
   }
@@ -35,11 +35,16 @@ export class FirebaseService {
 
   logout(){
     this.actualUserMail= "";
+    this.logged = false;
     this.auth.signOut();
   }
 
   getUserLogged(){
     return this.auth.authState;
+  }
+
+  setLoggedState(value: boolean){
+    this.logged = value;
   }
 
 }

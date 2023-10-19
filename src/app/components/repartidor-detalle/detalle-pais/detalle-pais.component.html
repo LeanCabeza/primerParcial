@@ -1,0 +1,18 @@
+<div class="card">
+  <div class="card-header bg-dark text-white">
+    <h2>Detalle del País</h2>
+  </div>
+  <div class="card-body">
+    <h3 class="card-title">{{ bandera[0].name.common }}</h3>
+    <p class="card-text">Capital: {{ bandera[0].capital[0] }}</p>
+    <p class="card-text">Población: {{ bandera[0].population }}</p>
+    <p class="card-text">Región: {{ bandera[0].region }}</p>
+
+    <div class="mb-3">
+      <img  style="height: 140px;" [src]="bandera[0].flags.png" class="img-fluid">
+    </div>
+
+    <p class="card-text">Descripción: {{ bandera[0].translations.eng.common }}</p>
+    <p class="card-text">Moneda: {{ bandera[0].currencies.TZS.name }}</p>
+  </div>
+</div>

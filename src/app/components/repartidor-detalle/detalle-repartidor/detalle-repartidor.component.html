@@ -1,0 +1,14 @@
+<div class="h-100 p-5 text-white bg-dark rounded-3">
+    <div class="card">
+        <div class="card-header bg-dark text-white">
+            <h2>Detalle Repartidor</h2>
+        </div>
+        <div class="card-body" *ngIf="this.repartidor != ''">
+            <h3 class="card-title">{{ repartidor.dni }}</h3>
+            <p class="card-text">Nombre: {{ repartidor.nombre }}</p>
+            <p class="card-text">Edad: {{ repartidor.edad }}</p>
+            <p class="card-text">Capacidad Transporte: {{ repartidor.capacidadTransporte }} helados</p>
+            <p class="card-text">Unidad Propia: {{ repartidor.unidadPropia }}</p>
+        </div>
+    </div>
+</div>

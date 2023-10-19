@@ -14,6 +14,10 @@ import { LoginComponent } from './components/login/login.component';
 import { AltaRepartidorComponent } from './components/alta-repartidor/alta-repartidor.component';
 import { FlagsComponent } from './components/alta-repartidor/flags/flags.component';
 import { FormComponent } from './components/alta-repartidor/form/form.component';
+import { DetallePaisComponent } from './components/repartidor-detalle/detalle-pais/detalle-pais.component';
+import { DetalleRepartidorComponent } from './components/repartidor-detalle/detalle-repartidor/detalle-repartidor.component';
+import { RepartidorDetalleComponent } from './components/repartidor-detalle/repartidor-detalle.component';
+import { ListaRepartidoresComponent } from './components/repartidor-detalle/lista-repartidores/lista-repartidores.component';
 
 const firebaseConfig = {
   apiKey: "AIzaSyAB9vc__WffuJUUZuIUrVGlACy42RvrLeU",
@@ -33,7 +37,11 @@ const firebaseConfig = {
     LoginComponent,
     AltaRepartidorComponent,
     FlagsComponent,
-    FormComponent
+    FormComponent,
+    DetallePaisComponent,
+    DetalleRepartidorComponent,
+    RepartidorDetalleComponent,
+    ListaRepartidoresComponent
    ],
   imports: [
     BrowserModule,

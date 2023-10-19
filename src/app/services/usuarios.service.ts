@@ -12,22 +12,22 @@ import { Repartidor } from '../interfaces/repartidor';
 export class UsuariosService {
 
   myDate = new Date();
-  usuarioColleccion!: AngularFirestoreCollection<Usuario>;
-  usuarioDoc!: AngularFirestoreDocument<Usuario>;  
-  usuarios!: Observable<Usuario[]>;
-  usuario!: Observable<Usuario>;
+  usuarioColleccion!: AngularFirestoreCollection<Repartidor>;
+  usuarioDoc!: AngularFirestoreDocument<Repartidor>;  
+  usuarios!: Observable<Repartidor[]>;
+  usuario!: Observable<Repartidor>;
 
   constructor(private db: AngularFirestore) { 
-    this.usuarioColleccion = db.collection('usuarios',ref => ref.orderBy('email','asc'));
+    this.usuarioColleccion = db.collection('repartidores',ref => ref.orderBy('dni','asc'));
   }
   
 
-  getUsuarios(): Observable<Usuario[]>{
+  getUsuarios(): Observable<Repartidor[]>{
     this.usuarios = this.usuarioColleccion.snapshotChanges().pipe(
       map(cambios =>{
         return cambios.map(accion =>{
-          const datos = accion.payload.doc.data() as Usuario;
-          datos.id = accion.payload.doc.id;
+          const datos = accion.payload.doc.data() as Repartidor;
+          datos.dni = accion.payload.doc.id;
           return datos;
         })
       })

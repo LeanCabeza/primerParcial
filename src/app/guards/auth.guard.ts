@@ -6,11 +6,11 @@ export const authGuard: CanActivateFn = (route, state) => {
   const firebaseService = inject(FirebaseService);
   const router = inject(Router);
 
-  const actualUserMail = firebaseService.actualUserMail; 
+  const logged = firebaseService.logged; 
   
-  console.log('guard value', actualUserMail);
+  console.log('guard value', logged);
 
-  if (actualUserMail == undefined) {
+  if (logged == false) {
     router.navigateByUrl('login');
     return false;
   }

@@ -12,6 +12,9 @@
       <a class="nav-link text-light" routerLink="/altaRepartidor">🍧 Alta Repartidor</a>
     </li>
     <li class="nav-item" *ngIf="logged == true">
+      <a class="nav-link text-light" routerLink="/repartidorDetalle"> 🔍 Repartidor Detalle</a>
+    </li>
+    <li class="nav-item" *ngIf="logged == true">
       <a class="nav-link text-light" routerLink="" (click)="logout()">⭕ Salir</a>
     </li>
   </ul>

@@ -1,0 +1,26 @@
+<div class="p-5 mb-4 bg-light rounded-3">
+  <div class="container-fluid py-5">
+    <h4 class="display-5 fw-bold text-center">Listado de Repartidores</h4>
+
+    <div class="table-responsive">
+      <table class="table table-bordered table-striped">
+        <thead class="bg-primary text-white">
+          <tr>
+            <th>DNI</th>
+            <th>Nombre</th>
+            <th>Edad</th>
+            <th>Accion</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let repartidor of repartidores">
+            <td>{{ repartidor.dni }}</td>
+            <td>{{ repartidor.nombre }}</td>
+            <td>{{ repartidor.edad }}</td>
+            <td><button class="btn btn-success" (click)="seleccionarRepartidor(repartidor)">Seleccionar</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

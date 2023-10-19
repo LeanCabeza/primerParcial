@@ -51,8 +51,8 @@
       <label for="unidadPropia" class="form-label">Unidad propia</label>
       <select class="form-select" id="unidadPropia" formControlName="unidadPropia">
         <option value="" disabled>Seleccionar...</option>
-        <option value=true>Si</option>
-        <option value=false>No</option>
+        <option value="Si">Si</option>
+        <option value="No">No</option>
       </select>
       <div *ngIf="repartidorForm.get('unidadPropia')?.hasError('required') && repartidorForm.get('unidadPropia')?.touched" class="text-danger">
         Unidad Propia es requerido.

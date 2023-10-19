@@ -24,6 +24,7 @@ export class HeaderComponent implements OnInit {
       if (user?.email != null) {
         this.logged = true; 
         this.emailUsuario = user.email 
+        this.fb.setLoggedState(true);
       } else this.logged = false;
     })
   }

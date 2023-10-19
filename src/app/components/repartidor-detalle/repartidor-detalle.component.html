@@ -1,0 +1,25 @@
+<main>
+  <div class="container py-4">
+    <header class="pb-3 mb-4 border-bottom">
+      <a href="/" class="d-flex align-items-center text-dark text-decoration-none">
+        <span class="fs-4">Detalle Repartidor</span>
+      </a>
+    </header>
+
+    <app-lista-repartidores (selectedRepartidorOutput)="recibirRepartidor($event)"></app-lista-repartidores>
+
+    <div class="row align-items-md-stretch">
+
+      <div class="col-md-6">
+        <app-detalle-repartidor [repartidor]="repartidor"></app-detalle-repartidor>
+      </div>
+
+      <div class="col-md-6">
+        <app-detalle-pais [repartidor]="repartidor" ></app-detalle-pais>
+      </div>
+
+    </div>
+
+  </div>
+</main>
+
