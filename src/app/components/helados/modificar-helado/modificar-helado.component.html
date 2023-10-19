@@ -1,0 +1,27 @@
+<div class="card mb-4 rounded-3 shadow-sm">
+  <div class="card-header py-3 bg-warning">
+    <h4 class="my-0 fw-normal">Modificar Helado</h4>
+  </div>
+  <div class="card-body" *ngIf="this.helado != null">
+    <form (ngSubmit)="modificarHelado()" #heladoForm="ngForm">
+      <div class="form-group">
+        <label for="nombre">Nombre</label>
+        <input type="text" class="form-control" id="nombre" name="nombre" [(ngModel)]="helado.sabor" disabled>
+      </div>
+      <div class="form-group">
+        <label for="ingredientes">Tipo</label>
+        <input type="text" class="form-control" id="tipo" name="tipo" [(ngModel)]="helado.tipo" required>
+      </div>
+      <div class="form-group">
+        <label for="precio">Precio</label>
+        <input type="number" class="form-control" id="precio" name="precio" [(ngModel)]="helado.precio" required>
+      </div>
+      <div class="form-group">
+        <label for="peso">Peso</label>
+        <input type="number" class="form-control" id="peso" name="peso" [(ngModel)]="helado.peso" required>
+      </div>
+      <hr>
+      <button type="submit" class="w-100 btn btn-lg btn-warning">Modificar</button>
+    </form>
+  </div>
+</div>

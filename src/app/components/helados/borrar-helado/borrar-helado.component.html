@@ -1,0 +1,14 @@
+<div class="card mb-4 rounded-3 shadow-sm border-danger">
+  <div class="card-header py-3 text-white bg-danger border-danger">
+    <h4 class="my-0 fw-normal">Borrar Helado</h4>
+  </div>
+  <div class="card-body" *ngIf="this.helado != null">
+    <h1 class="card-title pricing-card-title">{{this.helado.sabor}}</h1>
+    <ul class="list-unstyled mt-3 mb-4">
+      <li>Tipo: {{this.helado.tipo}}</li>
+      <li>Precio: {{this.helado.precio}}</li>
+      <li>Peso: $ {{this.helado.peso}}</li>
+    </ul>
+    <button type="button" class="w-100 btn btn-lg btn-danger" (click)="borrarHelado()">Borrar</button>
+  </div>
+</div>

@@ -1,0 +1,23 @@
+<div class="table-responsive">
+  <div class="table-responsive">
+    <table class="table table-bordered table-striped">
+      <thead class="bg-primary text-white">
+        <tr>
+          <th>Sabor</th>
+          <th>Tipo</th>
+          <th>Precio</th>
+          <th>Precio</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let helado of helados">
+          <td>{{ helado.sabor }}</td>
+          <td>{{ helado.tipo }}</td>
+          <td>{{ helado.precio }}</td>
+          <td>${{ helado.peso }}</td>
+          <td><button class="btn btn-success" (click)="seleccionarHelado(helado)">Seleccionar</button></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

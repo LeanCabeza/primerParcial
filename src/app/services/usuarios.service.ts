@@ -2,7 +2,6 @@ import { Injectable } from '@angular/core';
 import { AngularFirestore, AngularFirestoreCollection, AngularFirestoreDocument } from "@angular/fire/compat/firestore";
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
-import { collection, query, where } from "firebase/firestore";
 import { Usuario } from '../interfaces/usuario';
 import { Repartidor } from '../interfaces/repartidor';
 
@@ -13,7 +12,6 @@ export class UsuariosService {
 
   myDate = new Date();
   usuarioColleccion!: AngularFirestoreCollection<Repartidor>;
-  usuarioDoc!: AngularFirestoreDocument<Repartidor>;  
   usuarios!: Observable<Repartidor[]>;
   usuario!: Observable<Repartidor>;
 

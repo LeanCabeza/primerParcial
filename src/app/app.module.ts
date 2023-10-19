@@ -18,6 +18,12 @@ import { DetallePaisComponent } from './components/repartidor-detalle/detalle-pa
 import { DetalleRepartidorComponent } from './components/repartidor-detalle/detalle-repartidor/detalle-repartidor.component';
 import { RepartidorDetalleComponent } from './components/repartidor-detalle/repartidor-detalle.component';
 import { ListaRepartidoresComponent } from './components/repartidor-detalle/lista-repartidores/lista-repartidores.component';
+import { HeladosComponent } from './components/helados/helados.component';
+import { ListaHeladosComponent } from './components/helados/lista-helados/lista-helados.component';
+import { BorrarHeladoComponent } from './components/helados/borrar-helado/borrar-helado.component';
+import { CrearHeladoComponent } from './components/helados/crear-helado/crear-helado.component';
+import { ModificarHeladoComponent } from './components/helados/modificar-helado/modificar-helado.component';
+
 
 const firebaseConfig = {
   apiKey: "AIzaSyAB9vc__WffuJUUZuIUrVGlACy42RvrLeU",
@@ -41,7 +47,12 @@ const firebaseConfig = {
     DetallePaisComponent,
     DetalleRepartidorComponent,
     RepartidorDetalleComponent,
-    ListaRepartidoresComponent
+    ListaRepartidoresComponent,
+    HeladosComponent,
+    ListaHeladosComponent,
+    BorrarHeladoComponent,
+    CrearHeladoComponent,
+    ModificarHeladoComponent
    ],
   imports: [
     BrowserModule,
